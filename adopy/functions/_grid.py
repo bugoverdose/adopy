@@ -61,7 +61,7 @@ def make_grid_matrix(axes_dict: Dict[GK, GV],
             labels.extend(k)
 
         # Make a grid as a 2d matrix
-        g_2d = np.reshape(g, (-1, 1)) if n_d_each[i] == 1 else g
+        g_2d = np.reshape(g, (-1, 1)) if n_d_each[i] == 1 else np.array(g)
 
         # Convert to a given dtype
         g_2d = g_2d.astype(dtype)
