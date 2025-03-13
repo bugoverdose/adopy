@@ -17,15 +17,15 @@ data_like = TypeVar(
 integer_like = TypeVar(
     'integer_like',
     int,
-    np.int
+    np.integer
 )
 
 number_like = TypeVar(
     'number_like',
     float,
     int,
-    np.float,
-    np.int
+    np.floating,
+    np.integer
 )
 
 array_like = TypeVar(

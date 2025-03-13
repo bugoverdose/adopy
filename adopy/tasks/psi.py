@@ -225,7 +225,7 @@ class EnginePsi(Engine):
 
     @d_step.setter
     def d_step(self, value: integer_like):
-        if not isinstance(value, (int, np.int)) or value <= 0:
+        if not isinstance(value, (int, np.integer)) or value <= 0:
             raise ValueError('d_step should be an positive integer.')
         self._d_step = int(value)
 
@@ -272,7 +272,7 @@ class EnginePsi(Engine):
                 idx = min(len(self.grid_design) - 1,
                           self.idx_opt + (self.d_step * 2))
 
-            ret = self.grid_design.iloc[np.int(idx)]
+            ret = self.grid_design.iloc[np.integer(idx)]
 
         elif kind == 'random':
             idx = np.random.randint(self.n_d)
